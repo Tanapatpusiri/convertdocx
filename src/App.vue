@@ -14,7 +14,7 @@ const uploadCV = async (event) => {
   formData.append('cvFile', file);
 
   try {
-    const response = await fetch('http://localhost:1000/api/uploadCV', {
+    const response = await fetch('https://convertdocx.onrender.com/api/uploadCV', {
       method: 'POST',
       body: formData,
     });
@@ -53,7 +53,7 @@ const handleFileChange = () => {
     </div>
     <br />  <br />
     <button class="cv-download-button" :style="{ backgroundColor: downloadButtonColor }" :disabled="progress < 90">
-      <a href="http://localhost:1000/api/downloadCV" >Download</a>
+      <a href="https://convertdocx.onrender.com/api/downloadCV" >Download</a>
     </button>
   </div>
 </template>
